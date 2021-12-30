@@ -3,16 +3,22 @@ import { FormContainer, Header, LoginContainer, StyledButton, StyledForm, Styled
 import mealSvg from "../../assets/meal.svg"
 
 const Login = () => {
+
+const handleSubmit =(e)=>{
+    e.preventDefault()
+    window.location.href= "/"
+}
+
     return (
         <LoginContainer>
             <FormContainer>
             <StyledImg src={mealSvg} />
             <Header>{"<TayfurAcademy/>"}Recipe</Header>
 
-            <StyledForm>
+            <StyledForm onSubmit={handleSubmit} >
                 <StyledInput type="text" placeholder="username" required />
                 <StyledInput type="password" placeholder="password" required />
-                <StyledButton>Login</StyledButton>
+                <StyledButton type='submit' >Login</StyledButton>
             </StyledForm>
             </FormContainer>
             
