@@ -1,10 +1,22 @@
 import React from 'react'
+import { FormContainer, Header, LoginContainer, StyledButton, StyledForm, StyledImg, StyledInput } from './LoginStyles'
+import mealSvg from "../../assets/meal.svg"
 
 const Login = () => {
     return (
-        <div>
-            <h1>Login</h1>
-        </div>
+        <LoginContainer>
+            <FormContainer>
+            <StyledImg src={mealSvg} />
+            <Header>{"<TayfurAcademy/>"}Recipe</Header>
+
+            <StyledForm>
+                <StyledInput type="text" placeholder="username" required />
+                <StyledInput type="password" placeholder="password" required />
+                <StyledButton>Login</StyledButton>
+            </StyledForm>
+            </FormContainer>
+            
+        </LoginContainer>
     )
 }
 
